@@ -1,5 +1,5 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import BookStore from './components/BookStore';
@@ -21,7 +21,7 @@ function App() {
         </Row>
         <Routes>
           <Route path='/' element={<BookStore />} />
-          <Route path='/Cart' element={<Cart />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </Container>
       <Footer />

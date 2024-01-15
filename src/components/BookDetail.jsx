@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
-import FaShoppingCart from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 
 const BookDetail = ({ bookSelected }) => {
@@ -39,7 +39,11 @@ const BookDetail = ({ bookSelected }) => {
           </Row>
         </>
       ) : (
-        ''
+        <Row>
+          <Col sm={12}>
+            <h3>Clicca su un libro per i dettagli</h3>
+          </Col>
+        </Row>
       )}
     </div>
   );

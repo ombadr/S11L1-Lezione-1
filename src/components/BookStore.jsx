@@ -5,7 +5,7 @@ import BookDetail from './BookDetail';
 
 const BookStore = () => {
   const [books, setBooks] = useState([]);
-  const [bookSelected, setBookSelected] = useEffect(null);
+  const [bookSelected, setBookSelected] = useState(null);
 
   useEffect(() => {
     getBooks();
@@ -20,6 +20,7 @@ const BookStore = () => {
       if (resp.ok) {
         let fetchedBooks = await resp.json();
         setBooks(fetchedBooks);
+        console.log(fetchedBooks);
       } else {
         console.log('Errore nel recupero dei dati');
       }

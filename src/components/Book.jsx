@@ -2,9 +2,12 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const Book = ({ book, changeBook, bookSelected }) => {
+  // const isSelected = bookSelected && bookSelected.id === book.id;
+
   return (
     <Card
-      className={bookSelected.id === book.id ? 'custom-border mt-3' : 'mt-3'}
+      // className={isSelected ? 'custom-border mt-3' : 'mt-3'}
+      className={bookSelected?.id === book.id ? 'custom-border mt-3' : 'mt-3'}
       onClick={() => changeBook(book)}
       style={{ cursor: 'pointer' }}
     >
